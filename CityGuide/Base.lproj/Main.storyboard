@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="udG-fi-Nbr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2HH-Uw-DCF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -198,11 +198,11 @@
             </objects>
             <point key="canvasLocation" x="-249" y="-1693"/>
         </scene>
-        <!--Item-->
+        <!--old one-->
         <scene sceneID="S1F-qv-kTo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cJd-qO-n9E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YtI-mu-z53"/>
+                    <tabBarItem key="tabBarItem" title="old one" id="YtI-mu-z53"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sbo-n3-OUt">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -251,21 +251,53 @@
             </objects>
             <point key="canvasLocation" x="-2329" y="-1692"/>
         </scene>
-        <!--View Controller-->
+        <!--Hello, User-->
         <scene sceneID="QtF-D4-dLY">
             <objects>
                 <viewController id="2HH-Uw-DCF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4g-iD-WLo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Where would you like to go?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uSF-Wd-dz8">
+                                <rect key="frame" x="16" y="91" width="358" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gP-Gm-6UY" userLabel="Search Button">
+                                <rect key="frame" x="324" y="122" width="50" height="34"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <accessibility key="accessibilityConfiguration" label="Search button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ir5-8y-zGi"/>
+                                    <constraint firstAttribute="width" constant="50" id="e0w-l6-uSW"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSn-Lq-av8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QLf-Xf-E7Q">
+                                <rect key="frame" x="16" y="122" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hxV-eC-TFF"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zz3-yi-P0A"/>
+                    <navigationItem key="navigationItem" title="Hello, User" id="zz3-yi-P0A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBQ-Qe-iBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2329" y="-901"/>
+            <point key="canvasLocation" x="-2329.2307692307691" y="-901.42180094786727"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IGP-e6-KXH">
@@ -312,6 +344,9 @@
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
