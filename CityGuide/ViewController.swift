@@ -71,6 +71,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, AVSpeechSynth
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
         narator.delegate = self
         
