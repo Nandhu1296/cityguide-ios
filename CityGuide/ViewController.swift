@@ -540,6 +540,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate, AVSpeechSynth
         stopBtn.isHidden = true
         speakThis(sentence: "Routing stopped. Switching to exploration mode.")
     }
+    
+    @IBAction func newSettingsButton(){      // button for settings
+        let tvc = SettingsTableController()
+        tvc.items = [
+            "User Category",
+            "Route Preview",
+            "Distance Unit",
+            "Referece Distance Unit",
+            "Orientation Preference" ,
+            "Monitoring" ,
+            "Step Size (ft)",
+            "Weighted Moving Average",
+            "Set Threshold" ,
+            "Timer (Seconds)",
+            "Searching Radius (Meters)" ,
+            "GPS Accuracy"
+        ]
+        tvc.title = "Settings"
+        
+        navigationController?.pushViewController(tvc, animated: true)
+
+    }
+    
     @IBAction func didTapSettingsButton(){      // button for settings
         let tvc = SettingsTableController()
         tvc.items = [
